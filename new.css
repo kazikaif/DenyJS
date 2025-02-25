@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  height: 40px;
+  background-color: gray;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+}
+
+#type {
+  padding: 5px;
+  width: 80px;
+  margin-left: 5px;
+}
+#select {
+  padding: 5px;
+}
+#bold {
+  display: none;
+}
+#italic {
+  display: none;
+}
+#underline {
+  display: none;
+}
+#left {
+  display: none;
+}
+#center {
+  display: none;
+}
+#right {
+  display: none;
+}
+ 
+label {
+  cursor: pointer;
+
+  padding: 5px;
+  margin: 5px;
+}
+input[type="checkbox"]:checked + label {
+  background-color: red;
+  border-radius: 2px;
+}
+input[type="radio"]:checked + label {
+  background-color: red;
+  border-radius: 2px;
+}
+input[type="color"]{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+.container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 51px auto;
+}
+
+.col {
+  display: flex;
+  position: sticky;
+  top: 0;
+  min-width: max-content;
+  z-index: 2;
+}
+
+.rows {
+  height: 100%;
+  position: sticky;
+  left: 0;
+  width: 30px;
+  grid-column: 1;
+}
+
+.rowcell {
+  background-color: rgb(230, 124, 124);
+  width: 50px;
+  height: 31.6px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.colcell {
+  height: 30px;
+  background-color: rgb(255, 0, 0);
+  border: 1px solid black;
+  width: 120px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 40px;
+  z-index: 2;
+}
+
+.colcell:first-child {
+  background-color: rgb(71, 69, 69);
+  width: 50px;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.colcell:nth-child(0) {
+  left: 0;
+  top: 0;
+
+  background-color: rgb(255, 0, 0);
+}
+
+.cellr {
+  border: 1px solid black;
+  display: flex;
+}
+
+.cellc {
+  width: 120px;
+  height: 30px;
+  border: 1px solid black;
+  font-size: 23px;
+  overflow-x: hidden;
+  outline: none;
+  cursor: text;
+  white-space: pre-wrap;
+}
+
+.body {
+  grid-column: 2;
+}
+
+.bar {
+  display: flex;
+  width: 90vw;
+  gap: 2px;
+}
+.bar input {
+  flex-grow: 1;
+  border: 1px;
+  border-radius: 50px;
+  padding: 5px;
+}
+.selected {
+  width: 150px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
